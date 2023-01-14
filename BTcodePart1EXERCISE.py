@@ -118,10 +118,10 @@ if __name__ == '__main__':
     print("\nThe in order traversal:", numbers_tree.inOrder_traversal())
     print("The Pre order traversal:", numbers_tree.preOrder_traversal())
     print("The Post order traversal:", numbers_tree.postOrder_traversal()) 
-
+    print("\n=================================================================")
     print(f"\nInput letters:", letters)
     print(f"\nMin:",letters_tree.obt_min())
     print(f"\nMax:",letters_tree.obt_max())
     print(f"\nThe in order traversal:", letters_tree.inOrder_traversal())
     print(f"The Pre order traversal:", letters_tree.preOrder_traversal())
-    print(f"The Post order traversal:", letters_tree.postOrder_traversal()) 
+    print(f"The Post order traversal:", letters_tree.postOrder_traversal())
