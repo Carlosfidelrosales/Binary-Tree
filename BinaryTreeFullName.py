@@ -112,3 +112,25 @@ def build_tree(elements):
 if __name__ == '__main__':
     alphabets = ["C", "A", "R", "L", "O", "S", "F", "I", "D", "E", "L", "R", "O", "S", "A", "L", "E", "S"]
     alphabets_tree = build_tree(alphabets)
+
+
+    print(f"\nInput letters:", alphabets)
+
+    print(f"\nTHE MINUMUM AND MAXIMUM VALUE OF ELEMENT/LETTER THAT IS PRESENT IN THE FULL NAME.")
+    print(f"   Min:", alphabets_tree.obt_min())
+    print(f"   Max:", alphabets_tree.obt_max())
+
+    print(f"\nBY BINARY TREE TRAVERSALS,")
+    print(f"   The In order traversal:", alphabets_tree.inOrder_traversal())
+    print(f"   The Pre order traversal:", alphabets_tree.preOrder_traversal())
+    print(f"   The Post order traversal:", alphabets_tree.postOrder_traversal())
+
+    print(f"\nBY DELETING AN ALPHABET,")
+    # alphabets_tree.delete("R")
+    # print("   After removing the letter R ", alphabets_tree.inOrder_traversal())
+    alphabets_tree.delete("A")
+    print("   After removing the letter A ", alphabets_tree.inOrder_traversal())
+    
+    print(f"\nBY SEARCHING ON BUILD TREE,")
+    print("   Is Letter O located on the list? ", alphabets_tree.search("O"))
+    print("   Is Letter Z located on the list? ", alphabets_tree.search("Z"))
