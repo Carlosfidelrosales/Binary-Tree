@@ -58,6 +58,43 @@ class BinarySearchTreeNode:
             elements += self.right.preOrder_traversal()
 
         return elements
+
+    def search(self, val):
+        if self.data == val:
+            return True
+
+        if val < self.data:
+            if self.left:
+                return self.left.search(val)
+            else:
+                return False
+
+        if val > self.data:
+            if self.right:
+                return self.right.search(val)
+            else:
+                return False
+
+    def obt_max(self):
+        if self.right is None:
+            return self.data
+        return self.right.obt_max()
+
+    def obt_min(self):
+        if self.left is None:
+            return self.data
+        return self.left.obt_min()
+
+    def measured_sum(self):
+        if self.left:
+            sum_left = self.left.measured_sum()
+        else:
+            sum_left = 0
+        if self.right:
+            sum_right = self.right.measured_sum()
+        else:
+            sum_right = 0
+        return self.data + sum_left + sum_right
     
 
 
