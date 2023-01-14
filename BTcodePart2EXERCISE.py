@@ -129,4 +129,23 @@ class BinarySearchTreeNode:
             self.left = self.left.delete(max_val)
 
         return self
+
+def build_tree(elements):
+    print("Building tree with these elements:",elements)
+    root = BinarySearchTreeNode(elements[0])
+
+    for i in range(1,len(elements)):
+        root.join_child(elements[i])
+
+    return root
     
+if __name__ == '__main__':
+    numbers = [45, 4, 7, 12, 9, 61, 10, 74]
+    numbers_tree = build_tree(numbers)
+
+    # numbers_tree.delete(7)
+    # print("After removing the number 7 ", numbers_tree.inOrder_traversal()) 
+    # numbers_tree.delete(10)
+    # print("After removing the number 10 ", numbers_tree.inOrder_traversal()) 
+    # numbers_tree.delete(61)
+    # print("After removing the number 61 ", numbers_tree.inOrder_traversal())
