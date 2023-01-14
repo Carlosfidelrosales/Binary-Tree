@@ -22,3 +22,32 @@ class BinarySearchTreeNode:
             else:
                 self.right = BinarySearchTreeNode(data)
 
+    def inOrder_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.inOrder_traversal()
+
+        elements.append(self.data)
+
+        if self.right:
+            elements += self.right.inOrder_traversal()
+
+        return elements
+
+    def postOrder_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.postOrder_traversal()
+        if self.right:
+            elements += self.right.postOrder_traversal()
+
+        elements.append(self.data)
+
+        return elements
+
+    def preOrder_traversal(self):
+        elements = [self.data]
+        if self.left:
+            elements += self.left.preOrder_traversal()
+        if self.right:
+            elements += self.right.preOrder_traversal()
